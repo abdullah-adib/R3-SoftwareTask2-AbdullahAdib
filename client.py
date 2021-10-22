@@ -7,9 +7,11 @@ host = socket.gethostname()
 port = 7634
 s.connect((host, port))
 
+speed = 0
+
 
 def on_press(key):
-    speed = 0
+    global speed
     if format(key.char) == '0':
         speed = (0 / 5) * 255
         print(f"speed has been set to {speed}")
